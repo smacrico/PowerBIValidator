@@ -1,0 +1,7 @@
+pip install pandas pyadomd streamlit sqlalchemy
+
+powerbi://api.powerbi.com/v1.0/myorg/<workspace-name>
+
+example:
+powerbi://api.powerbi.com/v1.0/myorg/PowerBIValidator
+
