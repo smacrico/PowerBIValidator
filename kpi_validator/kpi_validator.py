@@ -18,6 +18,27 @@ df = pd.read_sql(query, conn)
 df["DateSubmited"] = pd.to_datetime(df["DateSubmited"])
 
 # -----------------------------
+# PowerBi Scanner
+# -----------------------------
+
+
+import streamlit as st
+
+from modules.powerbi_auth import get_access_token
+from modules.workspace_scanner import get_workspaces
+
+st.header("Power BI Workspace Scanner")
+
+if st.button("Scan Workspaces"):
+
+    token = get_access_token()
+
+    workspaces = get_workspaces(token)
+
+    st.write(workspaces)
+
+
+# -----------------------------
 # Streamlit UI
 # -----------------------------
 st.title("Power BI KPI Validator")
