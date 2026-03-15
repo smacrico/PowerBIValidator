@@ -1,3 +1,7 @@
+
+
+python -m streamlit run kpi_validator.py
+
 # PowerBIValidator - - - pip install pandas streamlit requests msal pytest
 adanced Power BI validator
 
